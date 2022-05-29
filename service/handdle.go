@@ -2,7 +2,6 @@ package service
 
 import (
 	"Baiyuetribe/glink/api"
-	"fmt"
 	"regexp"
 	"strings"
 
@@ -57,19 +56,4 @@ func ApiHandler(c *fiber.Ctx) error {
 	return c.SendString(r)
 	// return c.JSON(&fiber.Map{"msg": r})
 
-}
-
-func PrintLogo() {
-	fmt.Print(`
-
-	██████╗  █████╗ ██╗██╗   ██╗██╗   ██╗███████╗
-	██╔══██╗██╔══██╗██║╚██╗ ██╔╝██║   ██║██╔════╝
-	██████╔╝███████║██║ ╚████╔╝ ██║   ██║█████╗  
-	██╔══██╗██╔══██║██║  ╚██╔╝  ██║   ██║██╔══╝  
-	██████╔╝██║  ██║██║   ██║   ╚██████╔╝███████╗
-	╚═════╝ ╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝ ╚══════╝
-			欢迎使用Glink短视频去水印软件
-			作者QQ：2894049053
-
-`)
 }

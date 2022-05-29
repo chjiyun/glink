@@ -12,9 +12,8 @@ import (
 )
 
 func main() {
-	service.PrintLogo()
 	app := fiber.New(fiber.Config{
-		DisableStartupMessage: true,
+		// DisableStartupMessage: true,
 	})
 	// app.Use(logger.New())
 	app.Use(cors.New())
@@ -24,7 +23,5 @@ func main() {
 	// 	Root: packr.New("Assets Box", "/web"),
 	// }))
 	app.Get("api/*", service.ApiHandler) // 请求地址 http://127.0.0.1:3000/api/http://demo.com
-	log.Fatal(app.Listen(":3006"))
-	// fmt.Println("应用访问地址：http://127.0.0.1:3006")
-	// log.Fatal(app.Listen("127.0.0.1:3006"))
+	log.Fatal(app.Listen(":8006"))
 }
